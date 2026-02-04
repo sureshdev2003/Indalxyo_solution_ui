@@ -18,40 +18,27 @@ export default function Testimonials() {
 
   const testimonials: Testimonial[] = [
     {
-      name: 'Michael Roberts',
-      role: 'CEO, TechVentures Inc.',
+      name: 'Akilandam',
+      role: 'CEO, Nellai Connect.',
       image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop',
       rating: 5,
-      text: 'Nexus transformed our digital presence completely. Their team delivered a stunning website that increased our conversions by 150%. The attention to detail and technical expertise is unmatched.',
+      text: 'The development process was smooth from start to finish. Communication was excellent, and they provided quick support whenever we needed updates. Our website performance improved a lot.',
     },
     {
-      name: 'Jennifer Martinez',
-      role: 'Marketing Director, GrowthCo',
+      name: 'Jerome abel',
+      role: 'Director, TechSolutions',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop',
-      rating: 5,
-      text: 'Working with Nexus was an absolute pleasure. They understood our vision from day one and delivered beyond our expectations. Our app has received incredible feedback from users.',
+      rating: 4,
+      text: 'We needed a scalable web application, and they delivered exactly what we wanted using modern technologies. Very reliable and knowledgeable developers.',
     },
     {
-      name: 'David Thompson',
-      role: 'Founder, StartupHub',
+      name: 'Jacin',
+      role: 'Co-Founder',
       image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop',
       rating: 5,
-      text: 'The team at Nexus is incredibly talented and professional. They took our complex requirements and turned them into an elegant, user-friendly solution. Highly recommended!',
-    },
-    {
-      name: 'Sarah Chen',
-      role: 'CTO, InnovateLabs',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop',
-      rating: 5,
-      text: 'Nexus delivered our cloud infrastructure migration flawlessly. Their expertise in DevOps and automation saved us countless hours and significantly reduced our operational costs.',
-    },
-    {
-      name: 'James Wilson',
-      role: 'Product Manager, ScaleUp',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop',
-      rating: 5,
-      text: 'From design to development, Nexus provided end-to-end excellence. Their UI/UX team created an interface that our users love, and the development was rock-solid.',
-    },
+      text: 'After launching the new website built by this team, our online presence increased significantly. The clean design and smooth functionality helped us attract more clients',
+    }
+    
   ];
 
   // Auto-play functionality
@@ -144,13 +131,13 @@ export default function Testimonials() {
 
                     {/* Author */}
                     <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-nexus-red">
+                      {/* <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-nexus-red">
                         <img
                           src={testimonial.image}
                           alt={testimonial.name}
                           className="w-full h-full object-cover"
                         />
-                      </div>
+                      </div> */}
                       <div>
                         <h4 className="text-theme-primary font-heading font-bold text-lg">{testimonial.name}</h4>
                         <p className="text-nexus-red text-sm">{testimonial.role}</p>

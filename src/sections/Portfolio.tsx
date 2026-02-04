@@ -25,49 +25,49 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const filters = ['all', 'web', 'app', 'design'];
+  // const filters = ['all', 'web', 'app', 'design'];
 
   const projects: Project[] = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'Prepalyze Neet and JEE Exam Platform',
       category: 'web',
-      description: 'Modern shopping experience with AI recommendations',
-      fullDescription: 'A full-featured e-commerce platform built with Next.js and Node.js. Features include real-time inventory, AI-powered product recommendations, secure payment processing, and a comprehensive admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-      tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
+      description: 'Ai model based exam preparation platform',
+      fullDescription: 'A comprehensive web platform for NEET and JEE exam preparation, featuring AI-driven personalized learning paths, interactive quizzes, and real-time performance analytics to help students excel in their exams.',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770101638/Screenshot_2026-02-03_122040_tfepgr.png',
+      tags: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
       link: '#',
-      github: '#',
+      // github: '#',
       stats: [
-        { label: 'Conversion Rate', value: '+150%' },
+        { label: 'Conversion Rate', value: '+100%' },
         { label: 'Page Load', value: '0.8s' },
-        { label: 'Users', value: '50K+' },
+        { label: 'Users', value: '2K+' },
       ],
     },
     {
       id: 2,
-      title: 'Fitness Tracking App',
-      category: 'app',
-      description: 'Cross-platform mobile app for health monitoring',
-      fullDescription: 'A React Native fitness app that tracks workouts, nutrition, and health metrics. Integrates with wearable devices and provides personalized coaching recommendations.',
-      image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&h=600&fit=crop',
-      tags: ['React Native', 'Firebase', 'HealthKit', 'TensorFlow'],
+      title: 'Trust website',
+      category: 'Web',
+      description: 'Trust website for a Tirnelveli based trust',
+      fullDescription: 'A modern and responsive website for a Tirnelveli-based trust, showcasing their mission, projects, and impact. Features include donation integration, event management, and volunteer sign-up functionalities to engage the community effectively.',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770101932/Screenshot_2026-01-23_123032_qn4zxs.png',
+      tags: ['Next.js', 'Postgresql', 'tailwind css'],
       link: '#',
-      github: '#',
+      // github: '',
       stats: [
-        { label: 'Downloads', value: '100K+' },
+        { label: 'Veiws', value: '1K+' },
         { label: 'Rating', value: '4.8★' },
         { label: 'Retention', value: '65%' },
       ],
     },
     {
       id: 3,
-      title: 'Banking Dashboard',
-      category: 'design',
-      description: 'Intuitive financial management interface',
-      fullDescription: 'A comprehensive banking dashboard designed for enterprise clients. Features real-time transaction monitoring, fraud detection alerts, and detailed analytics reporting.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-      tags: ['Figma', 'React', 'D3.js', 'WebSocket'],
+      title: 'Appoinment Booking Site',
+      category: 'Web',
+      description: 'Scheduling and booking application for service providers',
+      fullDescription: 'A user-friendly web application that allows service providers to manage appointments, send reminders, and accept online payments. Features include calendar integration, customer management, and analytics dashboard to optimize scheduling efficiency.',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770103890/WhatsApp_Image_2026-02-03_at_12.54.46_PM_fdcism.jpg',
+      tags: ['Next.js', 'Postgresql', 'Tailwind css'],
       link: '#',
       stats: [
         { label: 'User Satisfaction', value: '94%' },
@@ -77,12 +77,12 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
     },
     {
       id: 4,
-      title: 'Social Media Platform',
+      title: 'Tourism Platform',
       category: 'web',
-      description: 'Community-driven content sharing platform',
-      fullDescription: 'A modern social platform with real-time messaging, content creation tools, and advanced moderation features. Built to handle millions of concurrent users.',
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
-      tags: ['Vue.js', 'Go', 'Redis', 'WebRTC'],
+      description: 'Tourism and travel booking platform',
+      fullDescription: 'A comprehensive tourism platform that offers travel packages, hotel bookings, and local experiences. Features include user reviews, itinerary planning, and secure payment processing to enhance the travel planning experience.',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770102863/Screenshot_2026-02-03_122610_s7hhyj.png',
+      tags: ['Wordpress', 'WP-form', 'Plugins',],
       link: '#',
       github: '#',
       stats: [
@@ -91,36 +91,8 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
         { label: 'Uptime', value: '99.99%' },
       ],
     },
-    {
-      id: 5,
-      title: 'Healthcare Portal',
-      category: 'app',
-      description: 'Patient management and telemedicine solution',
-      fullDescription: 'A HIPAA-compliant healthcare platform enabling virtual consultations, appointment scheduling, and electronic health records management.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
-      tags: ['React', 'Node.js', 'MongoDB', 'WebRTC'],
-      link: '#',
-      stats: [
-        { label: 'Patients Served', value: '500K+' },
-        { label: 'Consultations', value: '2M+' },
-        { label: 'Satisfaction', value: '96%' },
-      ],
-    },
-    {
-      id: 6,
-      title: 'Brand Identity System',
-      category: 'design',
-      description: 'Complete visual identity for tech startup',
-      fullDescription: 'A comprehensive brand identity system including logo design, color palette, typography guidelines, and marketing collateral for a Series B startup.',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
-      tags: ['Figma', 'Illustrator', 'After Effects'],
-      link: '#',
-      stats: [
-        { label: 'Brand Recognition', value: '+200%' },
-        { label: 'Design Assets', value: '500+' },
-        { label: 'Time Saved', value: '40hrs/wk' },
-      ],
-    },
+   
+    
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -147,13 +119,12 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
             FEATURED <span className="gradient-text">PROJECTS</span>
           </h2>
           <p className="text-theme-secondary text-lg max-w-3xl mx-auto">
-            Explore our portfolio of successful projects that have helped businesses 
-            achieve their digital goals.
+           Real challenges. Smart solutions. Proven results.
           </p>
         </motion.div>
 
         {/* Filter Buttons */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -172,7 +143,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
               {filter}
             </button>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -338,7 +309,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
                     <ExternalLink size={18} />
                     View Live
                   </a>
-                  {selectedProject.github && (
+                  {/* {selectedProject.github && (
                     <a
                       href={selectedProject.github}
                       className="btn-outline flex items-center gap-2"
@@ -346,7 +317,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
                       <Github size={18} />
                       View Code
                     </a>
-                  )}
+                  )} */}
                 </div>
               </div>
             </motion.div>

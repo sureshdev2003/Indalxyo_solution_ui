@@ -15,44 +15,42 @@ export default function About() {
     {
       icon: Eye,
       title: 'Vision',
-      description: 'To be the leading digital transformation partner, recognized for excellence and innovation.',
+      description: 'To be a trusted global technology partner that transforms ideas into impactful solutions, helping businesses and educational institutions thrive in the digital era.',
     },
     {
       icon: Heart,
-      title: 'Values',
-      description: 'Integrity, innovation, and client success are at the core of everything we do.',
+      title: 'Services',
+      description: 'From AI & Automation to Software Development, Data Analytics, Digital Marketing and Web Development — we offer complete IT solutions to help your business grow and stay competitive.',
     },
   ];
 
   const team = [
     {
-      name: 'Alex Chen',
+      name: 'ShreeRam MuthuDev',
       role: 'CEO & Founder',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770111088/IMG_4595.JPG_rxhy62.jpg',
     },
     {
-      name: 'Sarah Miller',
-      role: 'Creative Director',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+      name: 'Jachin',
+      role: 'Team Lead',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770197619/IMG-20250911-WA0000.jpg_a13riv.jpg',
     },
     {
-      name: 'James Wilson',
-      role: 'Tech Lead',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+      name: 'RamKumar B',
+      role: 'Backend Developer Lead',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770112001/aragonai-18f7d91c-9f2c-4997-b242-94816b1db625_sub7io.jpg',
     },
     {
-      name: 'Emily Davis',
-      role: 'Marketing Head',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
+      name: 'Roshan',
+      role: 'UI/UX Designer Lead',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770112233/1733809644914.jpg_aj8r2d.jpg',
     },
+    
   ];
 
   const timeline = [
-    { year: '2016', event: 'Company Founded', description: 'Started with a vision to transform digital experiences' },
-    { year: '2018', event: 'First 100 Clients', description: 'Reached milestone of 100 satisfied clients' },
-    { year: '2020', event: 'Global Expansion', description: 'Expanded services to international markets' },
-    { year: '2023', event: 'Innovation Award', description: 'Recognized as top digital agency' },
-    { year: '2026', event: '500+ Projects', description: 'Successfully delivered 500+ projects worldwide' },
+    { year: '2025', event: 'Company Founded', description: 'Started with a vision to transform digital experiences' },
+    { year: '2026', event: '10+ Projects', description: 'Successfully delivered 10+ projects worldwide' },
   ];
 
   return (
@@ -108,10 +106,10 @@ export default function About() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24"
         >
           {[
-            { icon: Award, value: '50+', label: 'Awards Won' },
-            { icon: Users, value: '150+', label: 'Team Members' },
-            { icon: Zap, value: '500+', label: 'Projects Done' },
-            { icon: Target, value: '98%', label: 'Success Rate' },
+            { icon: Award, value: '5+', label: 'Awards Won' },
+            { icon: Users, value: '10+', label: 'Team Members' },
+            { icon: Zap, value: '25+', label: 'Projects Done' },
+            { icon: Target, value: '90%', label: 'Success Rate' },
           ].map((stat, index) => (
             <div key={index} className="glass-red rounded-2xl p-6 text-center">
               <stat.icon className="text-nexus-red mx-auto mb-3" size={28} />

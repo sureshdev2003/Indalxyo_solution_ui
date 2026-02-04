@@ -36,10 +36,10 @@ export default function Hero({ onPageChange }: HeroProps) {
   }, []);
 
   const stats = [
-    { value: 500, suffix: '+', label: 'Projects Completed' },
-    { value: 150, suffix: '+', label: 'Happy Clients' },
-    { value: 10, suffix: '+', label: 'Years Experience' },
-    { value: 50, suffix: '+', label: 'Team Members' },
+    { value: 25, suffix: '+', label: 'Projects Completed' },
+    { value: 50, suffix: '+', label: 'Happy Clients' },
+    { value: 1, suffix: '+', label: 'Years Experience' },
+    { value: 10, suffix: '+', label: 'Team Members' },
   ];
 
   return (
@@ -67,7 +67,7 @@ export default function Hero({ onPageChange }: HeroProps) {
           >
             <span className="w-2 h-2 bg-nexus-red rounded-full mr-2 animate-pulse" />
             <span className="text-theme-secondary text-sm font-medium">
-              Innovative Digital Solutions
+              Indalyxo Solutions
             </span>
           </motion.div>
 
@@ -78,9 +78,9 @@ export default function Hero({ onPageChange }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-black text-theme-primary leading-tight mb-6"
           >
-            GROW YOUR
+            WHERE IDEAS
             <br />
-            <span className="gradient-text">BUSINESS</span> WITH US
+            <span className="gradient-text">TURN INTO</span> SOLUTION
           </motion.h1>
 
           {/* Subheadline */}

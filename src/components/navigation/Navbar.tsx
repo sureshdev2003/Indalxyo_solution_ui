@@ -56,12 +56,10 @@ export default function Navbar({ currentPage, onPageChange }: NavbarProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="w-10 h-10 bg-nexus-red rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-xl font-heading">N</span>
+              <div className="w-40 h-10  rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-xl font-heading"><img src='https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770109461/Indalyxo_Logo_-_1_2_a0lswj.png'/></span>
               </div>
-              <span className="text-theme-primary font-heading font-bold text-xl tracking-tight">
-                NEXUS<span className="text-nexus-red">.</span>
-              </span>
+              
             </motion.div>
 
             {/* Desktop Navigation */}

@@ -118,7 +118,7 @@ export default function CTASection({ onPageChange }: CTASectionProps) {
           </motion.div>
 
           {/* Trust badges */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -135,11 +135,11 @@ export default function CTASection({ onPageChange }: CTASectionProps) {
                 </span>
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* Newsletter Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.7 }}
@@ -191,7 +191,7 @@ export default function CTASection({ onPageChange }: CTASectionProps) {
               )}
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Quick Contact Info */}
         <motion.div
@@ -201,9 +201,9 @@ export default function CTASection({ onPageChange }: CTASectionProps) {
           className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {[
-            { label: 'Email Us', value: 'hello@nexus.com', href: 'mailto:hello@nexus.com' },
-            { label: 'Call Us', value: '+1 (234) 567-890', href: 'tel:+1234567890' },
-            { label: 'Visit Us', value: 'Silicon Valley, CA', href: '#' },
+            { label: 'Email Us', value: 'indalyxosolutions@gmail', href: 'mailto:indalyxosolutions@gmail.com' },
+            { label: 'Call Us', value: '+91 9488164927', href: 'tel:+91 9600162710' },
+            { label: 'Visit Us', value: 'No:81, Pothigai Nagar, Tirunelveli, Tamil Nadu-627007', href: '#' },
           ].map((item, index) => (
             <a
               key={index}

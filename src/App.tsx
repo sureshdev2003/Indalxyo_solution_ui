@@ -109,7 +109,7 @@ function HomePage({ onPageChange }: { onPageChange: (page: string) => void }) {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: 'Web Development', desc: 'Scalable web applications', icon: '🌐' },
               { title: 'App Development', desc: 'Native & cross-platform apps', icon: '📱' },
@@ -129,7 +129,7 @@ function HomePage({ onPageChange }: { onPageChange: (page: string) => void }) {
                 <p className="text-theme-secondary">{service.desc}</p>
               </motion.div>
             ))}
-          </div>
+          </div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -176,7 +176,7 @@ function App() {
       case 'about':
         return <About />;
       case 'services':
-        return <Services />;
+         return <Services onPageChange={handlePageChange} />;
       case 'testimonials':
         return <Testimonials />;
       case 'contact':

@@ -19,7 +19,7 @@ export default function ThemeToggle() {
         className="absolute inset-0 rounded-full"
         initial={false}
         animate={{
-          backgroundColor: isLight ? '#FDB813' : '#4B5563',
+          backgroundColor: isLight ? '#f2f2f2' : '#4B5563',
         }}
         transition={{ duration: 0.3 }}
       />
@@ -37,7 +37,7 @@ export default function ThemeToggle() {
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="absolute"
         >
-          <Sun className="w-5 h-5 text-white" />
+          <Sun className="w-5 h-5 text-black" />
         </motion.div>
         
         {/* Moon Icon */}

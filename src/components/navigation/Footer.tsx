@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Github, ArrowUp } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram, ArrowUp, Youtube } from 'lucide-react';
 
 interface FooterProps {
   onPageChange: (page: string) => void;
@@ -27,6 +27,8 @@ export default function Footer({ onPageChange }: FooterProps) {
       { name: 'App Development', id: 'services' },
       { name: 'UI/UX Design', id: 'services' },
       { name: 'Digital Marketing', id: 'services' },
+      { name: 'AI Automation', id: 'services' },
+      { name: 'Data Migration', id: 'services' },
     ],
     support: [
       { name: 'FAQ', id: 'contact' },
@@ -50,29 +52,48 @@ export default function Footer({ onPageChange }: FooterProps) {
               onClick={() => handleNavClick('home')}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="w-12 h-12 bg-nexus-red rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-2xl font-heading">N</span>
+              <div className="w-40 h-20  rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-2xl font-heading"><img src='https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770109290/Indalyxo_Logo_-_1_1_s71xty.png'/></span>
               </div>
-              <span className="text-theme-primary font-heading font-bold text-2xl tracking-tight">
-                NEXUS<span className="text-nexus-red">.</span>
-              </span>
+             
             </motion.div>
             <p className="text-theme-secondary mb-6 max-w-sm">
               Transforming ideas into digital reality. We build innovative solutions that drive business growth and user engagement.
             </p>
             <div className="flex space-x-4">
-              {[Linkedin, Twitter, Instagram, Github].map((Icon, index) => (
-                <motion.a
-                  key={index}
-                  href="#"
-                  className="w-10 h-10 rounded-lg bg-theme-card flex items-center justify-center text-theme-secondary hover:bg-nexus-red hover:text-white transition-all duration-300"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Icon size={18} />
-                </motion.a>
-              ))}
-            </div>
+  <motion.a
+    href="https://www.linkedin.com/company/indalyxo-solutions/posts/?feedView=all"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-lg bg-theme-card flex items-center justify-center text-theme-secondary hover:bg-nexus-red hover:text-white transition-all duration-300"
+    whileHover={{ scale: 1.1, y: -2 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <Linkedin size={18} />
+  </motion.a>
+
+  <motion.a
+    href="https://www.instagram.com/indalyxo.solutions/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-lg bg-theme-card flex items-center justify-center text-theme-secondary hover:bg-nexus-red hover:text-white transition-all duration-300"
+    whileHover={{ scale: 1.1, y: -2 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <Instagram size={18} />
+  </motion.a>
+  <motion.a
+    href="https://www.youtube.com/@indalyxopodcast"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-lg bg-theme-card flex items-center justify-center text-theme-secondary hover:bg-nexus-red hover:text-white transition-all duration-300"
+    whileHover={{ scale: 1.1, y: -2 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <Youtube size={18} />
+  </motion.a>
+</div>
+
           </div>
 
           {/* Company Links */}
@@ -116,19 +137,19 @@ export default function Footer({ onPageChange }: FooterProps) {
               <li className="flex items-start space-x-3">
                 <MapPin className="text-nexus-red mt-1 flex-shrink-0" size={18} />
                 <span className="text-theme-secondary text-sm">
-                  123 Tech Street, Silicon Valley, CA 94025
+                  No:81, Pothigai Nagar, Tirunelveli, Tamil Nadu-627007
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="text-nexus-red flex-shrink-0" size={18} />
-                <a href="mailto:hello@nexus.com" className="text-theme-secondary text-sm hover:text-nexus-red transition-colors">
-                  hello@nexus.com
+                <a href="mailto:indalyxosolutions@gmail.com" className="text-theme-secondary text-sm hover:text-nexus-red transition-colors">
+                  indalyxosolutions@gmail.com
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="text-nexus-red flex-shrink-0" size={18} />
-                <a href="tel:+1234567890" className="text-theme-secondary text-sm hover:text-nexus-red transition-colors">
-                  +1 (234) 567-890
+                <a href="tel:+91 9600162710" className="text-theme-secondary text-sm hover:text-nexus-red transition-colors">
+                  +91 9600162710
                 </a>
               </li>
             </ul>
@@ -138,7 +159,7 @@ export default function Footer({ onPageChange }: FooterProps) {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-theme flex flex-col md:flex-row items-center justify-between">
           <p className="text-theme-muted text-sm mb-4 md:mb-0">
-            © 2026 Nexus Digital Solutions. All rights reserved.
+            © 2026 Indalxyo Solution. All rights reserved.
           </p>
           <motion.button
             onClick={scrollToTop}

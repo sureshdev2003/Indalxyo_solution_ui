@@ -68,25 +68,25 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@nexus.com',
-      href: 'mailto:hello@nexus.com',
+      value: 'indalyxosolutions@gmail.com',
+      href: 'mailto:indalxyosolutions@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (234) 567-890',
-      href: 'tel:+1234567890',
+      value: '+91 9600162710',
+      href: 'tel:+91 9600162710',
     },
     {
       icon: MapPin,
       label: 'Address',
-      value: '123 Tech Street, Silicon Valley, CA 94025',
+      value: 'No:81, Pothigai Nagar, Tirunelveli, Tamil Nadu-627007',
       href: '#',
     },
   ];
 
   return (
-    <section ref={sectionRef} className="bg-theme-primary py-20 md:py-32 relative overflow-hidden">
+    <section ref={sectionRef} id='contact' className="bg-theme-primary py-20 md:py-32 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-nexus-red/5 to-transparent" />
       
@@ -141,10 +141,10 @@ export default function Contact() {
               className="glass rounded-2xl overflow-hidden h-64"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.639436474726!2d-122.083746884692!3d37.421999979825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63103.38351224715!2d77.745356!3d8.695209!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b040d002350fb15%3A0x48a49774ec202749!2sINDALYXO%20SOLUTIONS!5e0!3m2!1sen!2sus!4v1770113801753!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
-                style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }}
+                style={{ border: 0,  }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -192,7 +192,7 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Doe"
+                      placeholder="Your Name"
                       className={`w-full px-4 py-3 bg-theme-card rounded-lg border ${
                         errors.name ? 'border-nexus-red' : 'border-theme'
                       } text-theme-primary placeholder-theme-muted focus:border-nexus-red focus:outline-none transition-colors`}
@@ -212,7 +212,7 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder="Your EmailId"
                       className={`w-full px-4 py-3 bg-theme-card rounded-lg border ${
                         errors.email ? 'border-nexus-red' : 'border-theme'
                       } text-theme-primary placeholder-theme-muted focus:border-nexus-red focus:outline-none transition-colors`}
@@ -232,7 +232,7 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (234) 567-890"
+                      placeholder="Phone Number"
                       className="w-full px-4 py-3 bg-theme-card rounded-lg border border-theme text-theme-primary placeholder-theme-muted focus:border-nexus-red focus:outline-none transition-colors"
                     />
                   </div>
@@ -246,7 +246,7 @@ export default function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell us about your project..."
+                      placeholder="Type your message here..."
                       rows={5}
                       className={`w-full px-4 py-3 bg-theme-card rounded-lg border ${
                         errors.message ? 'border-nexus-red' : 'border-theme'
