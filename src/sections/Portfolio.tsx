@@ -258,7 +258,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-theme-primary via-transparent to-transparent" />
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-theme-primary/80 flex items-center justify-center text-theme-primary hover:bg-nexus-red hover:text-white transition-colors"
+                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-theme-primary/80 flex items-center justify-center bg-nexus-red  hover:text-black transition-colors"
                 >
                   <X size={20} />
                 </button>
