@@ -24,29 +24,49 @@ export default function About() {
     },
   ];
 
-  const team = [
+const leadership = [
+  {
+    name: 'ShreeRam MuthuDev',
+    role: 'Founder & Managing Director',
+    description:
+      'When I started the company, my vision was clear — to build a company that stands for quality, reliability, and trust. Our journey is built on strong values, customer satisfaction, and continuous improvement.',
+    image:
+      'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770111088/IMG_4595.JPG_rxhy62.jpg',
+  },
+  {
+    name: 'Jachin',
+    role: 'Director',
+    description:
+      'Customer satisfaction has always been at the heart of everything we do. From product design to after-sales support, we focus on building long-term relationships.',
+    image:
+      'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770197619/IMG-20250911-WA0000.jpg_a13riv.jpg',
+  },
+  {
+    name: 'Suresh C',
+    role: 'Director',
+    description:
+      'We combine modern technology with years of industry experience. Every product we deliver reflects our commitment to excellence and innovation.',
+    image:
+      '',
+  },
+  {
+    name: 'Ramkumar B',
+    role: 'Director',
+    description:
+      'We combine modern technology with years of industry experience. Every product we deliver reflects our commitment to excellence and innovation.',
+    image:
+      'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770112001/aragonai-18f7d91c-9f2c-4997-b242-94816b1db625_sub7io.jpg',
+  },
     {
-      name: 'ShreeRam MuthuDev',
-      role: 'CEO & Founder',
-      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770111088/IMG_4595.JPG_rxhy62.jpg',
-    },
-    {
-      name: 'Jachin',
-      role: 'Team Lead',
-      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770197619/IMG-20250911-WA0000.jpg_a13riv.jpg',
-    },
-    {
-      name: 'RamKumar B',
-      role: 'Backend Developer Lead',
-      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770112001/aragonai-18f7d91c-9f2c-4997-b242-94816b1db625_sub7io.jpg',
-    },
-    {
-      name: 'Roshan',
-      role: 'UI/UX Designer Lead',
-      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770112233/1733809644914.jpg_aj8r2d.jpg',
-    },
-    
-  ];
+    name: 'Roshan C',
+    role: 'Director',
+    description:
+      'We combine modern technology with years of industry experience. Every product we deliver reflects our commitment to excellence and innovation.',
+    image:
+      'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770112233/1733809644914.jpg_aj8r2d.jpg',
+  },
+];
+
 
   const timeline = [
     { year: '2025', event: 'Company Founded', description: 'Started with a vision to transform digital experiences' },
@@ -156,41 +176,55 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Team Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 1.2 }}
-        >
-          <h3 className="text-3xl font-heading font-bold text-theme-primary text-center mb-12">
-            Meet Our <span className="text-nexus-red">Team</span>
+{/* Leadership Section */}
+<section className="bg-theme-primary py-24">
+  <div className="max-w-7xl mx-auto px-6 space-y-32">
+    {leadership.map((member, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
+          index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
+        }`}
+      >
+        {/* TEXT SIDE */}
+        <div className={`${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
+          <span className="text-xs uppercase tracking-widest text-nexus-red font-semibold block mb-3">
+            Leadership
+          </span>
+
+          <h3 className="text-4xl md:text-5xl font-heading font-bold text-theme-primary leading-tight mb-6">
+            {member.role}
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-                className="group"
-              >
-                <div className="relative overflow-hidden rounded-2xl mb-4">
-                  <div className="aspect-square">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-theme-primary via-transparent to-transparent opacity-60" />
-                  <div className="absolute inset-0 bg-nexus-red/0 group-hover:bg-nexus-red/20 transition-colors duration-300" />
-                </div>
-                <h4 className="text-theme-primary font-heading font-semibold text-lg">{member.name}</h4>
-                <p className="text-nexus-red text-sm">{member.role}</p>
-              </motion.div>
-            ))}
+
+          <p className="text-theme-secondary text-lg leading-relaxed max-w-xl mb-6">
+            “{member.description}”
+          </p>
+
+          <p className="font-heading font-semibold text-theme-primary">
+            {member.name}
+          </p>
+        </div>
+
+        {/* IMAGE SIDE */}
+        <div className={`${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
+          <div className="relative w-full max-w-md mx-auto">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-auto rounded-lg object-cover"
+            />
           </div>
-        </motion.div>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+
       </div>
     </section>
   );
