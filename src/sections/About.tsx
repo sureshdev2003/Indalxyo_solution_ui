@@ -74,8 +74,7 @@ export default function About() {
             WHO WE <span className="gradient-text">ARE</span>
           </h2>
           <p className="text-theme-secondary text-lg max-w-3xl mx-auto">
-            We are a team of passionate developers, designers, and strategists dedicated to 
-            creating exceptional digital experiences that drive business growth.
+            We are a team of passionate developers, designers, and strategists from one of the best IT companies, committed to delivering innovative digital experiences that fuel business success.
           </p>
         </motion.div>
 

@@ -1,4 +1,6 @@
 import { useRef, useState } from 'react';
+import { useEffect } from "react";
+
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
 import {
@@ -33,6 +35,44 @@ export default function Services({ onPageChange }: ServiceProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
   const [selectedService, setSelectedService] = useState<Service | null>(null);
+
+
+const WORD = " INDALYXO";
+const TYPE_SPEED = 120;     // ms per letter
+const RETYPE_DELAY = 5000; // 5 seconds
+const [typedText, setTypedText] = useState("");
+
+useEffect(() => {
+  let index = 0;
+  let typingInterval: NodeJS.Timeout;
+  let restartTimeout: NodeJS.Timeout;
+
+  const startTyping = () => {
+    setTypedText("");
+    index = 0;
+
+    typingInterval = setInterval(() => {
+      if (index < WORD.length) {
+        setTypedText((prev) => prev + WORD.charAt(index));
+        index++;
+      } else {
+        clearInterval(typingInterval);
+
+        restartTimeout = setTimeout(() => {
+          startTyping();
+        }, RETYPE_DELAY);
+      }
+    }, TYPE_SPEED);
+  };
+
+  startTyping();
+
+  return () => {
+    clearInterval(typingInterval);
+    clearTimeout(restartTimeout);
+  };
+}, []);
+
 
 
   const services: Service[] = [
@@ -108,7 +148,7 @@ export default function Services({ onPageChange }: ServiceProps) {
       ],
       color: '#E10600',
       image:
-        'https://res.cloudinary.com/dfd3sbnvd/image/upload/v1770103837/trends-in-digital-marketing_eohgqg.png',
+        'https://res.cloudinary.com/dfd3sbnvd/image/upload/v1770447973/dd_kgis5a.webp',
     },
     {
       icon: Cpu,
@@ -126,7 +166,7 @@ export default function Services({ onPageChange }: ServiceProps) {
       ],
       color: '#E10600',
       image:
-        'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770114999/ai.jpg_cez7ti.jpg',
+        'https://res.cloudinary.com/dfd3sbnvd/image/upload/v1770447776/ai56_qsm02i.avif',
     },
     {
       icon: Palette,
@@ -156,22 +196,33 @@ export default function Services({ onPageChange }: ServiceProps) {
     >
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* HEADER */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <span className="text-nexus-red font-semibold text-sm uppercase block mb-4">
-            Our Services
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            WHAT WE <span className="gradient-text">OFFER</span>
-          </h2>
-          <p className="text-theme-secondary max-w-3xl mx-auto">
-            Comprehensive digital solutions tailored to your business needs.
-          </p>
-        </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={isInView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.6 }}
+  className="text-center mb-16"
+>
+  <span className="text-nexus-red font-semibold text-sm uppercase block mb-4">
+    Our Services
+  </span>
+
+  <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+    WHAT WE OFFER IN
+    <br />
+
+    {/* TYPEWRITER */}
+    <span className="block mt-2 text-nexus-red tracking-wide min-h-[1.2em]">
+      {typedText}
+      <span className="ml-1 animate-pulse">|</span>
+    </span>
+  </h2>
+
+  <p className="text-theme-secondary max-w-3xl mx-auto">
+   Comprehensive digital solutions tailored to your business needs by one of the best IT companies driving innovation and growth.
+  </p>
+</motion.div>
+
+
 
         {/* SERVICES GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
