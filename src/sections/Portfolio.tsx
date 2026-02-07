@@ -13,7 +13,7 @@ interface Project {
   description: string;
   fullDescription: string;
   image: string;
-  tags: string[];
+  // tags: string[];
   link: string;
   github?: string;
   stats: { label: string; value: string }[];
@@ -35,7 +35,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
       description: 'Ai model based exam preparation platform',
       fullDescription: 'A comprehensive web platform for NEET and JEE exam preparation, featuring AI-driven personalized learning paths, interactive quizzes, and real-time performance analytics to help students excel in their exams.',
       image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770101638/Screenshot_2026-02-03_122040_tfepgr.png',
-      tags: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      // tags: ['Next.js', 'Postgresql', 'Tailwind css'],
       link: '#',
       // github: '#',
       stats: [
@@ -51,7 +51,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
       description: 'Trust website for a Tirnelveli based trust',
       fullDescription: 'A modern and responsive website for a Tirnelveli-based trust, showcasing their mission, projects, and impact. Features include donation integration, event management, and volunteer sign-up functionalities to engage the community effectively.',
       image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770101932/Screenshot_2026-01-23_123032_qn4zxs.png',
-      tags: ['Next.js', 'Postgresql', 'tailwind css'],
+      // tags: ['Next.js', 'Postgresql', 'tailwind css'],
       link: '#',
       // github: '',
       stats: [
@@ -67,7 +67,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
       description: 'Scheduling and booking application for service providers',
       fullDescription: 'A user-friendly web application that allows service providers to manage appointments, send reminders, and accept online payments. Features include calendar integration, customer management, and analytics dashboard to optimize scheduling efficiency.',
       image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770103890/WhatsApp_Image_2026-02-03_at_12.54.46_PM_fdcism.jpg',
-      tags: ['Next.js', 'Postgresql', 'Tailwind css'],
+      // tags: ['Next.js', 'Postgresql', 'Tailwind css'],
       link: '#',
       stats: [
         { label: 'User Satisfaction', value: '94%' },
@@ -82,9 +82,41 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
       description: 'Tourism and travel booking platform',
       fullDescription: 'A comprehensive tourism platform that offers travel packages, hotel bookings, and local experiences. Features include user reviews, itinerary planning, and secure payment processing to enhance the travel planning experience.',
       image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770102863/Screenshot_2026-02-03_122610_s7hhyj.png',
-      tags: ['Wordpress', 'WP-form', 'Plugins',],
+      // tags: ['Next.js', 'Postgresql', 'Tailwind css'],
       link: '#',
-      github: '#',
+      // github: '#',
+      stats: [
+        { label: 'Active Users', value: '1M+' },
+        { label: 'Messages/Day', value: '10M+' },
+        { label: 'Uptime', value: '99.99%' },
+      ],
+    },
+    {
+      id: 4,
+      title: 'Bussiness website',
+      category: 'web',
+      description: 'Marketing website for a local business',
+      fullDescription: 'A sleek and modern marketing website designed for a local business, featuring a portfolio of services, client testimonials, and a contact form. The site is optimized for SEO and mobile responsiveness to attract and engage potential customers effectively.',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770444332/Screenshot_2026-02-07_112614_nmixjq.png',
+      // tags: ['Next.js', 'Postgresql', 'Tailwind css'],
+      link: 'https://marketingsuits.com/',
+      // github: '#',
+      stats: [
+        { label: 'Active Users', value: '1M+' },
+        { label: 'Messages/Day', value: '10M+' },
+        { label: 'Uptime', value: '99.99%' },
+      ],
+    },
+     {
+      id: 4,
+      title: 'Indurstry website',
+      category: 'web',
+      description: 'Pump manufacturing company',
+      fullDescription: 'Professional website for a pump manufacturing company, showcasing their product range, technical specifications, and industry certifications. The site includes a resource center with case studies and a contact form for inquiries, designed to establish credibility and drive business growth.',
+      image: 'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770444970/Screenshot_2026-02-07_114514_kh1ot6.png',
+      // tags: ['Next.js', 'Postgresql', 'Tailwind css'],
+      link: 'https://marketingsuits.com/',
+      // github: '#',
       stats: [
         { label: 'Active Users', value: '1M+' },
         { label: 'Messages/Day', value: '10M+' },
@@ -192,7 +224,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
                     <p className="text-theme-secondary text-sm">{project.description}</p>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mt-4">
+                    {/* <div className="flex flex-wrap gap-2 mt-4">
                       {project.tags.slice(0, 3).map((tag, i) => (
                         <span
                           key={i}
@@ -201,7 +233,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
                           {tag}
                         </span>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </motion.div>
@@ -289,7 +321,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
                 </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-8">
+                {/* <div className="flex flex-wrap gap-2 mb-8">
                   {selectedProject.tags.map((tag, i) => (
                     <span
                       key={i}
@@ -298,7 +330,7 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
                       {tag}
                     </span>
                   ))}
-                </div>
+                </div> */}
 
                 {/* Actions */}
                 <div className="flex gap-4">
