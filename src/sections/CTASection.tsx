@@ -202,7 +202,7 @@ export default function CTASection({ onPageChange }: CTASectionProps) {
         >
           {[
             { label: 'Email Us', value: 'indalyxosolutions@gmail', href: 'mailto:indalyxosolutions@gmail.com' },
-            { label: 'Call Us', value: '+91 9488164927', href: 'tel:+91 9600162710' },
+            { label: 'Call Us', value: '+91 9600162710 ', href: 'tel:+91 9600162710' },
             { label: 'Visit Us', value: 'No:81, Pothigai Nagar, Tirunelveli, Tamil Nadu-627007', href: '#' },
           ].map((item, index) => (
             <a

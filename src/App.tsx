@@ -52,7 +52,7 @@ function LoadingScreen({ onComplete }: { onComplete: () => void }) {
         className="mb-8"
       >
         <div className="w-20 h-20 bg-nexus-red rounded-xl flex items-center justify-center">
-          <span className="text-white font-bold text-4xl font-heading">N</span>
+          <span className="text-white font-bold text-4xl font-heading">IS</span>
         </div>
       </motion.div>
 
