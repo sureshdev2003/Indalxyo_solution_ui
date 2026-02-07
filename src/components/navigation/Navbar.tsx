@@ -49,6 +49,7 @@ export default function Navbar({ currentPage, onPageChange }: NavbarProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
+
             {/* Logo */}
             <motion.div
               className="flex items-center cursor-pointer"
@@ -56,10 +57,13 @@ export default function Navbar({ currentPage, onPageChange }: NavbarProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="w-40 h-10  rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-xl font-heading"><img src='https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770109461/Indalyxo_Logo_-_1_2_a0lswj.png'/></span>
+              <div className="w-12 h-10 flex items-center mr-3 gap-4">
+                <img
+                  src="https://res.cloudinary.com/dfd3sbnvd/image/upload/v1770447047/logo_zyzipv.png"
+                  alt="IS Logo"
+                  className="h-10 w-20 w-auto object-contain"
+                /><span className='w-30'>Indalxyo Solutions</span>
               </div>
-              
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -86,12 +90,12 @@ export default function Navbar({ currentPage, onPageChange }: NavbarProps) {
               ))}
             </div>
 
-            {/* Right Side - Theme Toggle & CTA */}
+            {/* Right Side */}
             <div className="hidden md:flex items-center gap-4">
               <ThemeToggle />
               <motion.button
                 onClick={() => handleNavClick('contact')}
-                className="px-6 py-2.5 bg-nexus-red text-white text-sm font-semibold rounded-lg hover:bg-theme-primary hover:text-nexus-red transition-all duration-300 border border-nexus-red hover:border-nexus-red"
+                className="px-6 py-2.5 bg-nexus-red text-white text-sm font-semibold rounded-lg hover:bg-theme-primary hover:text-nexus-red transition-all duration-300 border border-nexus-red"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -109,6 +113,7 @@ export default function Navbar({ currentPage, onPageChange }: NavbarProps) {
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
+
           </div>
         </div>
       </motion.nav>
@@ -131,7 +136,7 @@ export default function Navbar({ currentPage, onPageChange }: NavbarProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => handleNavClick(link.id)}
-                  className={`text-3xl font-heading font-bold transition-colors duration-300 ${
+                  className={`text-3xl font-heading font-bold ${
                     currentPage === link.id ? 'text-nexus-red' : 'text-theme-primary'
                   }`}
                 >
