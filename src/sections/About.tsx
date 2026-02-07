@@ -35,7 +35,7 @@ const leadership = [
   },
   {
     name: 'Jachin',
-    role: 'Director',
+    role: 'Team Lead',
     description:
       'Customer satisfaction has always been at the heart of everything we do. From product design to after-sales support, we focus on building long-term relationships.',
     image:
@@ -43,23 +43,23 @@ const leadership = [
   },
   {
     name: 'Suresh C',
-    role: 'Director',
+    role: 'Frontend Developer',
     description:
       'We combine modern technology with years of industry experience. Every product we deliver reflects our commitment to excellence and innovation.',
     image:
-      '',
+      'https://res.cloudinary.com/dfbnggesn/image/upload/v1770457662/suresh_pic_xtxvky.png',
   },
   {
     name: 'Ramkumar B',
-    role: 'Director',
+    role: 'Backend Developer',
     description:
       'We combine modern technology with years of industry experience. Every product we deliver reflects our commitment to excellence and innovation.',
     image:
       'https://res.cloudinary.com/dkbtx5r9v/image/upload/v1770112001/aragonai-18f7d91c-9f2c-4997-b242-94816b1db625_sub7io.jpg',
   },
     {
-    name: 'Roshan C',
-    role: 'Director',
+    name: 'Roshan P',
+    role: 'UI/UX designer',
     description:
       'We combine modern technology with years of industry experience. Every product we deliver reflects our commitment to excellence and innovation.',
     image:
