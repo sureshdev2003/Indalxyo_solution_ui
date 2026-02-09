@@ -309,9 +309,15 @@ export default function Portfolio({ onPageChange }: PortfolioProps) {
                 </p>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
                   {selectedProject.stats.map((stat, index) => (
-                    <div key={index} className="glass rounded-xl p-4 text-center">
+                    <div
+  key={index}
+  className={`glass rounded-xl p-4 text-center ${
+    index === 2 ? 'col-span-2 sm:col-span-1' : ''
+  }`}
+>
+
                       <div className="text-2xl font-heading font-bold text-nexus-red">
                         {stat.value}
                       </div>
